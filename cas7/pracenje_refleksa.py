@@ -24,7 +24,7 @@ def kontrast(x):
     global MIN, MAX
     return np.clip(0, 255, (255/(MAX-MIN))*(x-MIN))
 
-prag = 0.625
+prag = 0.8
 def im2bw(x):
     global prag
     if x/256<prag:
