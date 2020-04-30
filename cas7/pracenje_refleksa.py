@@ -51,6 +51,7 @@ while success:
     crvena_slika[:, :, 1] = image[:,:,2]
     crvena_slika[:, :, 2] = image[:,:,2]
     
+    print(image.shape)
     siva_slika = np.zeros(shape=image.shape, dtype=np.uint8)
     siva_slika[:, :, 0] = siva_slika[:, :, 1] = siva_slika[:, :, 2] = image[:,:,2]*.3 + image[:,:,1]*.59 + image[:,:,0]*.11
 
@@ -69,9 +70,9 @@ while success:
 
     xu, yu = 0, 0
     n = 0
-    for x in range(cb_slika.shape[0]):
-        for y in range(cb_slika.shape[1]):
-            if cb_slika[x,y,0] > 128:
+    for y in range(cb_slika.shape[0]):
+        for x in range(cb_slika.shape[1]):
+            if cb_slika[y, x, 0] > 128:
                 xu += x
                 yu += y
                 n  += 1
@@ -95,7 +96,7 @@ print(yc)
 
 t = [i/120 for i in range(count)]
 
-plt.plot(t, yc)
+plt.plot(t, xc)
 plt.grid()
 plt.xlabel("време[s]")
 plt.ylabel("положај маркера на апсциси [пискел]")
