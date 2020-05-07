@@ -85,7 +85,3 @@ plt.xlabel("Таласна дужина [nm]")
 plt.ylabel("[%]")
 plt.grid()
 plt.show()
-
-    #plt.plot(lambd/1e-9, (R+T)*100)
-    #plt.grid()
-    #plt.show()
