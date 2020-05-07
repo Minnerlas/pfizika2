@@ -31,7 +31,7 @@ diff = lambda x: [b-a for (a,b) in zip(x, x[1:])]
 
 def koleno(teta, t, J, m, g, L, omega0, ksi):
     T = ((m*g*L)/2-omega0)*J
-    c = 2*ksi*omega0*J
+    c = ksi*omega0*J
     return [teta[1], -(c/J)*teta[1] - ((m*g*L)/2 - T/J) * teta[0]]
 
 
