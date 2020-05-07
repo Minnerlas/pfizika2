@@ -13,6 +13,10 @@ from os import system
 _=system("clear")
 
 
-from podaci import *
+from podaci2 import *
 
-print(xc)
+plt.plot(tc, xc)
+plt.grid()
+plt.show()
+
+#print(xc)
