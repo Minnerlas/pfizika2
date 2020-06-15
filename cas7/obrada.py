@@ -13,10 +13,10 @@ from os import system
 _=system("clear")
 
 
-from podaci import *
+from podaci2 import *
 
 XC_fit = xc[83:222]
-vreme_fit = t[83:222]
+vreme_fit = tc[83:222]
 
 f = lambda t, X0, A0, alfa, t0, omegad: X0 + A0*np.exp(-alfa*(t-t0))*np.sin(omegad*(t - t0))
 
@@ -25,6 +25,8 @@ xopt, xcov = curve_fit(f, vreme_fit, XC_fit)
 # print(xcov)
 
 x = [f(t,*xopt) for t in vreme_fit]
+
+
 X0=xopt[0]
 A0=xopt[1]
 alfa=xopt[2]
@@ -48,3 +50,5 @@ plt.grid()
 plt.show()
 
 print(f"X0={xopt[0]}; A0={xopt[1]}; alfa={xopt[2]}; t0={xopt[3]}; omegad={xopt[4]}\nomega0={omega0}; ksi={ksi}")
+
+
