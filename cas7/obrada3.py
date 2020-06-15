@@ -15,6 +15,13 @@ _=system("clear")
 
 from podaci2 import *
 
+<<<<<<< HEAD
+plt.plot(tc, xc)
+plt.grid()
+plt.show()
+
+#print(xc)
+=======
 XC_fit = xc[83:222]
 vreme_fit = tc[83:222]
 
@@ -50,5 +57,9 @@ plt.grid()
 plt.show()
 
 print(f"X0={xopt[0]}; A0={xopt[1]}; alfa={xopt[2]}; t0={xopt[3]}; omegad={xopt[4]}\nomega0={omega0}; ksi={ksi}")
+<<<<<<< HEAD:cas7/obrada.py
 
 
+=======
+>>>>>>> 5a7f8aa31b2bff1f276470420b11e433d66f52fd
+>>>>>>> 0538714051cc19c5385d4740bac4c7b3c406891d:cas7/obrada3.py
